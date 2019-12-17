@@ -21,7 +21,7 @@
         
                 <input type="text" name="nome" id="nome" placeholder="Nome" required> <br>
                 <input type="text" name="usuario" id="usuario" placeholder="Usuario" required> <br>
-                <input type="email" name="email" id="email" placeholder="@hotmail.com" required> <br>
+                <input type="text" name="matricula" id="matricula" placeholder="Matricula" required> <br>
                 <input type="password" name="senha1" id="senha1" placeholder="*******" required> <br>
                 <input type="password" name="senha2" id="senha2" placeholder="*******" required> <p></p>
                 <input class="btn-entrar" type="submit" value="Cadastrar">

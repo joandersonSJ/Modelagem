@@ -4,7 +4,7 @@
         
         private        $Nome;
         private     $Usuario;
-        private       $Email;
+        private   $Matricula;
         private       $Senha;
 
         //Metodos acessores
@@ -18,8 +18,8 @@
                 return $this->Usuario;
             }
 
-            function getEmail() {
-                return $this->Email;
+            function getMatricula() {
+                return $this->Matricula;
             }
 
             function getSenha() {
@@ -35,11 +35,10 @@
                 $this->Usuario = $Usuario;
             }
 
-            function setEmail($Email) {
-                $this->Email = $Email;
+            function setMatricula($Matricula) {
+                $this->Matricula = $Matricula;
             }
-
-
+            
             function setSenha($Senha) {
                 $this->Senha = $Senha;
             }

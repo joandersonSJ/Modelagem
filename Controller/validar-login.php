@@ -18,8 +18,8 @@ $user = new Usuario();
 
 
     //Envio das informações pelo objeto
-    $user->     setUsuario($Usuario);
-    $user->         setSenha($Senha);
+    $user->         setUsuario($Usuario);
+    $user->             setSenha($Senha);
 
     
     //resgate das informações pelo objeto
@@ -27,12 +27,13 @@ $user = new Usuario();
     $Senha =            $user->getSenha();
 
 
-  $query = $con->prepare("SELECT * FROM usuarios WHERE nome = :nome
-  OR email = :email");
+  $query = $con->prepare("SELECT * FROM usuarios WHERE usuario = :usuario
+  OR matricula = :matricula AND senha = :senha");
   
   
-  $query->bindValue (":nome", $Usuario);
-  $query->bindValue(":email", $Usuario);
+  $query->bindValue (":usuario", $Usuario);
+  $query->bindValue(":matricula", $Usuario);
+  $query->bindValue (":senha", $Senha);
 
   $query->execute();
   
@@ -47,12 +48,10 @@ $user = new Usuario();
             //Manipulação de informações que foram retirados do banco
             foreach($query->fetchAll() as $valor){
           
-
             $_SESSION['nome'] =                   $valor['nome'];
             $_SESSION['usuario'] =             $valor['usuario'];
-            $_SESSION['email'] =                 $valor['email'];
+            $_SESSION['matricula'] =         $valor['matricula'];
             $_SESSION['senha'] =                 $valor['senha'];
-            $_SESSION['arquivo'] =                            "";
             
           }
 

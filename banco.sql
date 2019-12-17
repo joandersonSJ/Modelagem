@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Dez-2019 às 13:59
+-- Generation Time: 17-Dez-2019 às 15:16
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.3
 
@@ -46,7 +46,7 @@ CREATE TABLE `produto` (
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `usuario` varchar(200) NOT NULL,
-  `email` varchar(200) NOT NULL,
+  `matricula` varchar(200) NOT NULL,
   `senha` varchar(200) NOT NULL,
   `nome` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -81,7 +81,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
