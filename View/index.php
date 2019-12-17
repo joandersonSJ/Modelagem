@@ -11,34 +11,19 @@ session_destroy();
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./estilo/style_loginCadastro.css">
-        <title>RPG</title>
+        <title>Modelagem</title>
     </head>
     <body>
-            <!-- Menu docszar -->
-            <nav id="menu">
-                <ul>
-                    <li><a><img src="./../img/DZ.png" width="250px" height="70px"></a></li>
-                </ul>
-            </nav>
-
             <div id="login">
                 <form method="POST" action="../Controller/validar-login.php">
-                <h1>Entrar</h1>
-                <input type="text" name="usuario" placeholder="Usuário" required>
-                
-                <input type="password" name="senha" placeholder="Senha" required>
-                
-                <input class="btn-entrar" type="submit" value="Entrar">    
-            </form>
+                    <input type="text" name="usuario" placeholder="Usuário" required>
+                    
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    
+                    <input class="btn-entrar" type="submit" value="Entrar">    
+                </form>
             
-            <a class="link-cadastro" href="cadastro.php"> Já é cadastrado? Cadastre-se!</a> <p></p>
-
-            <a class="link-recuperarsenha" href="">Recuperar senha!</a>
-            <!--<form method="POST" action="Cadastro.php">
-                <p></p>
-                <input class="btn-cadastrar" type="submit" value="Cadastrar">
-            </form>-->
-
+                <a class="link-cadastro" href="cadastro.php"> Já é cadastrado? Cadastre-se!</a> <p></p>
             </div>   
     </body>
 </html>

@@ -1,6 +1,5 @@
 <?php
 
-
     Class Usuario{
         
         private        $Nome;
@@ -8,9 +7,7 @@
         private       $Email;
         private       $Senha;
 
-
         //Metodos acessores
-
 
             //Metodos Getters
             function getNome() {
@@ -29,8 +26,6 @@
                 return $this->Senha;
             }
 
-
-
             //Metodos Setters
             function setNome($Nome) {
                 $this->Nome = $Nome;
@@ -48,5 +43,4 @@
             function setSenha($Senha) {
                 $this->Senha = $Senha;
             }
-
     }
