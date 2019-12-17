@@ -26,15 +26,15 @@ $con = getConexao();
     if($query->rowCount() != 0){
         echo"<table>";
             
-            echo"<tr>";
+                echo"<tr>";
+                    
+                    echo             "<th>Nome</th>";
+                    echo       "<th>Quantidade</th>";
+                    echo "<th>Preço de fabrica</th>";
+                    echo   "<th>Preço de venda</th>";
+                    echo            "<th>Lucro</th>";
                 
-                echo             "<th>Nome</th>";
-                echo       "<th>Quantidade</th>";
-                echo "<th>Preço de fabrica</th>";
-                echo   "<th>Preço de venda</th>";
-                echo            "<th>Lucro</th>";
-            
-            echo"</tr>";
+                echo"</tr>";
 
             foreach($query as $produtos){
                 echo "<tr>";

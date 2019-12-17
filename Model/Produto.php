@@ -27,7 +27,8 @@ Class Produto {
                 }
 
                 function getLucro() {
-                    return $this->getPrecoDeVenda() - $this->getPrecoDeFabrica();
+                    $this->Lucro = $this->getPrecoDeVenda() - $this->getPrecoDeFabrica();
+                    return $this->Lucro;
                 }
 
                 //Metodos Setters
