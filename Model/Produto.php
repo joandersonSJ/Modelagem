@@ -35,15 +35,15 @@ Class Produto {
                     $this->Nome = $Nome;
                 }
 
-                function setQuantidade() {
+                function setQuantidade($Quantidade) {
                     $this->Quantidade = $Quantidade;
                 }
 
-                function setPrecoDeFabrica() {
+                function setPrecoDeFabrica($PrecoDeFabrica) {
                     $this->PrecoDeFabrica = $PrecoDeFabrica;
                 }
 
-                function setPrecoDeVenda() {
+                function setPrecoDeVenda($PrecoDeVenda) {
                     $this->PrecoDeVenda = $PrecoDeVenda;
                 }
 }

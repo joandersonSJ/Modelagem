@@ -16,10 +16,10 @@
  $precoDeVenda =        filter_input(INPUT_POST, 'precoDeVenda',FILTER_SANITIZE_SPECIAL_CHARS);
 
 //Envio das informações pelo objeto
-$user->                            setNome('nome');
-$user->                setQuantidade('quantidade');
-$user->        setPrecoDeFabrica('precoDeFabrica');
-$user->            setPrecoDeVenda('precoDeVenda');
+$user->                            setNome($nome);
+$user->                setQuantidade($quantidade);
+$user->        setPrecoDeFabrica($precoDeFabrica);
+$user->            setPrecoDeVenda($precoDeVenda);
 
 //Resgate das informações pelo objeto    
 $Nome =                              $user->getNome();
@@ -29,7 +29,7 @@ $PrecoDeVenda =              $user->getPrecoDeVenda();
 $Lucro =                            $user->getLucro();
 
 //Query reponsavel por preparar o codigo que insere as informações no banco
-$query = $con->prepare("INSERT INTO venda
+$query = $con->prepare("INSERT INTO produto
 (nome,quantidade,precoDeFabrica,precoDeVenda,lucro)VALUES (:nome,:quantidade,
 :precoDeFabrica,:precoDeVenda,:lucro)");
 
