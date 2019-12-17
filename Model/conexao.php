@@ -3,7 +3,7 @@
     function getConexao(){
     
         //Variaveis responsaveis por identificar o banco de dados
-        $banco = 'mysql:dbname=login;host=localhost';
+        $banco = 'mysql:dbname=banco;host=localhost';
         $username= 'root';
         $password = ''; 
 

@@ -27,7 +27,7 @@ Class Produto {
                 }
 
                 function getLucro() {
-                    return $this->Lucro;
+                    return $this->getPrecoDeVenda() - $this->getPrecoDeFabrica();
                 }
 
                 //Metodos Setters
@@ -45,9 +45,5 @@ Class Produto {
 
                 function setPrecoDeVenda() {
                     $this->PrecoDeVenda = $PrecoDeVenda;
-                }
-
-                function setLucro() {
-                    $this->Lucro = $Lucro;
                 }
 }

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 04-Dez-2019 às 14:21
+-- Generation Time: 17-Dez-2019 às 13:59
 -- Versão do servidor: 10.1.38-MariaDB
--- versão do PHP: 7.3.4
+-- versão do PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,23 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `login`
+-- Database: `banco`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `precoDeFabrica` float NOT NULL,
+  `precoDeVenda` float NOT NULL,
+  `lucro` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -34,19 +49,17 @@ CREATE TABLE `usuarios` (
   `email` varchar(200) NOT NULL,
   `senha` varchar(200) NOT NULL,
   `nome` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`, `nome`) VALUES
-(1, 'aaaa', 'aaa@gmail.com', 'a', 'a'),
-(2, 'aaaa', 'aaa@gmail.com', '1', 'a');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `usuarios`
@@ -59,10 +72,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT for table `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
