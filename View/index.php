@@ -11,20 +11,31 @@ session_destroy();
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./estilo/style_loginCadastro.css">
+        <link href="Style/main.css" rel="stylesheet" type="text/css"/>
         <title>Modelagem</title>
     </head>
     <body>
+    <center>
             <div id="login">
                 <form method="POST" action="../Controller/validar-login.php">
                     <input type="text" name="usuario" placeholder="Usuário" required>
-                    
+                    <br>
+                    <br>
+                    <br>
                     <input type="password" name="senha" placeholder="Senha" required>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <input class="btn-entrar" type="submit" value="Entrar"> 
+                    <br>
                     
-                    <input class="btn-entrar" type="submit" value="Entrar">    
+                    <a class="link-cadastro" href="cadastro.php"> Já é cadastrado? Cadastre-se!</a> <p></p>
                 </form>
             
-                <a class="link-cadastro" href="cadastro.php"> Já é cadastrado? Cadastre-se!</a> <p></p>
+
             </div>   
+    </center>
     </body>
 </html>
 

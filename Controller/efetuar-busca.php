@@ -3,9 +3,12 @@
 //Inicio da sessão
 session_start();
 include "../Model/conexao.php";
-
+require_once "../Model/Produto.php";
 //Criação do objeto responsa
 $con = getConexao();
+$user = new Produto();
+
+$DataCadastro =              $user->getDataCadastro();
 
     //Verificação se a sessão de nome "senha" não foi iniciado
     if(!isset($_SESSION["senha"])){
@@ -33,6 +36,7 @@ $con = getConexao();
                     echo "<th>Preço de fabrica</th>";
                     echo   "<th>Preço de venda</th>";
                     echo            "<th>Lucro</th>";
+                    echo     "<th>DataCadastro</th>";
                 
                 echo"</tr>";
 
@@ -44,6 +48,7 @@ $con = getConexao();
                     echo"<td>".$produtos["precoDeFabrica"]."</td>";
                     echo"<td>".  $produtos["precoDeVenda"]."</td>";
                     echo"<td>".         $produtos["lucro"]."</td>";
+                   echo "<td>".             $DataCadastro ."</td>";
                     
                 echo "<tr>";
             }

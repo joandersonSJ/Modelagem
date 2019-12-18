@@ -1,0 +1,28 @@
+body{
+     background-color: #cccccc;
+}
+.form{
+    margin-top: 100px;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+    border: 5px;
+    border-radius: 7px;
+}
+
+.form input{
+    outline: none;
+    background-color: #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form input[type="submit"]:hover{
+    background-color: #00cc66;
+}
+
+input [type=submit]{
+    padding: 3px;
+}

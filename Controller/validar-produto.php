@@ -27,11 +27,13 @@ $Quantidade =                  $user->getQuantidade();
 $PrecoDeFabrica =          $user->getPrecoDeFabrica();
 $PrecoDeVenda =              $user->getPrecoDeVenda();
 $Lucro =                            $user->getLucro();
+$DataCadastro =              $user->getDataCadastro();
+ 
 
 //Query reponsavel por preparar o codigo que insere as informações no banco
 $query = $con->prepare("INSERT INTO produto
-(nome,quantidade,precoDeFabrica,precoDeVenda,lucro)VALUES (:nome,:quantidade,
-:precoDeFabrica,:precoDeVenda,:lucro)");
+(nome,quantidade,precoDeFabrica,precoDeVenda,lucro,DataCadastro)VALUES (:nome,:quantidade,
+:precoDeFabrica,:precoDeVenda,:lucro,:DataCadastro)");
 
 
 $query->                             bindValue(":nome",$Nome);
@@ -39,5 +41,6 @@ $query->                 bindValue(":quantidade",$Quantidade);
 $query->         bindValue(":precoDeFabrica",$PrecoDeFabrica);
 $query->             bindValue(":precoDeVenda",$PrecoDeVenda);
 $query->                           bindValue(":lucro",$Lucro);
+$query->                           bindValue(":DataCadastro",$DataCadastro);
 
 $query->execute();
